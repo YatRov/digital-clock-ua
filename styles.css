@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 32%;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    position: relative;
+    background: linear-gradient(35deg, #005BBB, #FFD500);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.text{
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0d0d0d, #504545);
+    color: #fff;
+    position: relative;
+}
+
+.container{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(97, 94, 95, 0.83);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+
+}
+
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #701e1e00;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.clock span{
+    font-size: 80px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+}
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after{
+    content: 'ГОДИНА';
+}
+
+#min::after{
+    content: 'ХВИЛИНА';
+}
+
+#sec::after{
+    content: 'СЕКУНДА';
+}
+
+.footer{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.text {
+    font-size: 25px;
+    color: #ffffff;
+    white-space: nowrap;
+    position: absolute;
+    animation: scrollText 20s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
