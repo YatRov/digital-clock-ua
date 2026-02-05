@@ -4,7 +4,7 @@ Simple digital clock showing the current time.
 Updates in real-time.
 
 ## Demo
-[https://yatrov.github.io/digital-clock-ua/](#)
+[[https://yatrov.github.io/digital-clock-ua/](https://yatrov.github.io/digital-clock-ua/)](#)
 
 ## Technologies
 - HTML5
